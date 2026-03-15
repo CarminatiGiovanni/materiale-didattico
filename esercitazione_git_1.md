@@ -264,7 +264,7 @@ git checkout <hash-v2> -- file.txt
 **6.** Controlla il contenuto e lo stato:
 
 ```bash
-cat file.txt
+type file.txt
 git status
 ```
 
@@ -294,14 +294,14 @@ A volte modifichi un file per sbaglio e vuoi tornare indietro **prima** di fare 
 
 ```bash
 echo "modifica sbagliata" >> file.txt
-cat file.txt
+type file.txt
 ```
 
 **10.** Annulla la modifica (torna all'ultimo commit):
 
 ```bash
 git restore file.txt
-cat file.txt
+type file.txt
 ```
 
 > La modifica è sparita. Attenzione: `git restore` è irreversibile — la modifica non è mai stata committata, quindi non c'è modo di recuperarla.
@@ -421,7 +421,7 @@ git add . && git commit -m "Aggiunta materia"
 
 ```bash
 git checkout main
-cat README.md
+type README.md
 ```
 
 **7.** Visualizza entrambi i branch:
@@ -443,7 +443,7 @@ git merge aggiunte
 **9.** Verifica il risultato:
 
 ```bash
-cat README.md
+type README.md
 git log --oneline --graph --all
 ```
 
@@ -486,7 +486,7 @@ git merge fix-versione
 **13.** Apri `README.md` e guarda i marcatori:
 
 ```bash
-cat README.md
+type README.md
 ```
 
 Vedrai:
@@ -539,15 +539,9 @@ git log --oneline --graph --all
 
 **D8.** Dopo aver fatto `git checkout main` al passo 6, le modifiche del branch `aggiunte` non sono visibili in `README.md`. Dove si trovano in quel momento? Sono andate perse?
 
-> _Risposta:_ _______________________________________________
-
 **D9.** Perché è buona pratica sviluppare una nuova funzionalità su un branch separato invece di lavorare direttamente su `main`? Fai un esempio concreto tratto da un progetto reale (anche scolastico).
 
-> _Risposta:_ _______________________________________________
-
 **D10.** Durante la risoluzione di un conflitto, Git non sceglie automaticamente quale versione tenere. Secondo te, perché Git non può farlo da solo? Esistono casi in cui potrebbe farlo senza rischi?
-
-> _Risposta:_ _______________________________________________
 
 ---
 
